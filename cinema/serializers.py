@@ -117,7 +117,7 @@ class TicketCreateSerializer(TicketListSerializer):
 
 
 class OrderListSerializer(serializers.ModelSerializer):
-    tickets = TicketListSerializer(many=True, read_only=False)
+    tickets = TicketListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Order
